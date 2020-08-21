@@ -24,8 +24,8 @@ class App extends Component {
         // let movieArray = [response.data.Search];
         console.log(response.data.Search[0].Poster);
         this.setState({
-          title: response.data.Search[0].Title,
-          poster: response.data.Search[0].Poster,
+          title: response.data.Search[1].Title,
+          poster: response.data.Search[1].Poster,
         });
       });
   };
