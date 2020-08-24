@@ -3,6 +3,7 @@ import "./App.css";
 import MovieList from "./MovieList";
 import MovieDetail from "./MovieDetail";
 import axios from "axios";
+import { Link, Route, Switch, Redirect } from "react-router-dom";
 
 class App extends Component {
   constructor() {
@@ -66,8 +67,26 @@ class App extends Component {
             <input onClick={this.handleSubmit} type="submit" value="submit" />
           </form>
         </nav>
-        <MovieList movieArray={this.state.movieArray} />
-        <MovieDetail />
+        {/* <MovieList movieArray={this.state.movieArray} /> */}
+        {/* <MovieDetail /> */}
+        <main>
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={() => <MovieList movieArray={this.state.movieArray} />}
+            />
+            <Route
+              path="/MovieDetail"
+              render={(routerProps) => (
+                <MovieDetail
+                  {...routerProps}
+                  movieArray={this.state.movieArray}
+                />
+              )}
+            />
+          </Switch>
+        </main>
         <footer>
           This Awesome Movie App was created by Elizabeth and Greg!!
         </footer>

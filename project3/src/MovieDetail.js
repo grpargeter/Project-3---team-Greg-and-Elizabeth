@@ -6,7 +6,6 @@ class MovieDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      movieId: "",
       title: "",
       year: "",
       rated: "",
@@ -20,15 +19,14 @@ class MovieDetail extends Component {
   }
   componentDidMount = () => {
     axios
-      .get(`http://www.omdbapi.com/?apikey=4d3f7a95&page=1&i=tt1022603`)
+      .get(`http://www.omdbapi.com/?apikey=4d3f7a95&page=1&i=tt0111161`)
       .then((response) => {
-        console.log(response.data.poster);
+        console.log(this.movieId);
         // const movieId = this.props.match.params.movieId;
         // for (let i = 0; i < response.data.length; i++) {
         //   if (response.data[i].imdbID == movieId)
         {
           this.setState({
-            movieId: response.data.movieId,
             title: response.data.Title,
             year: response.data.Year,
             rated: response.data.Rated,
