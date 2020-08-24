@@ -44,14 +44,17 @@ class App extends Component {
       .get(`http://www.omdbapi.com/?s=${this.state.search}&apikey=4d3f7a95`)
       .then((response) => {
         console.log(response);
-        this.setState({
+        this.setState({    
           movieArray: response.data.Search,
         });
       });
+      console.log(this.props)
+      this.props.history.push("/")
+      
   };
 
   render() {
-    return (
+     return (
       <div className="App">
         <nav>
           <h1> Welcome to Movie Search</h1>
@@ -62,7 +65,7 @@ class App extends Component {
               placeholder="Search"
               onChange={this.handleSearch}
             />
-            <input onClick={this.handleSubmit} type="submit" value="submit" />
+             <input type="submit" value="submit" />
           </form>
         </nav>
         <main>
@@ -76,9 +79,7 @@ class App extends Component {
               path="/MovieDetail/:imdbID"
               render={(routerProps) => (
                 <MovieDetail
-                  {...routerProps}
-                  movieArray={this.state.movieArray}
-                />
+                  {...routerProps}/>
               )}
             />
           </Switch>

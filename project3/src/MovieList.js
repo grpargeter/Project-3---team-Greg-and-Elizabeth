@@ -4,16 +4,13 @@ import {Link} from 'react-router-dom';
 
 const MovieList = (props) => {
   let movies = props.movieArray.map((movie) => {
-    // console.log(props.movieArray[0].imdbID)
     return (
-      
-      <div className="MovieCode" key={movie.imdbID}>
-        
-<Link to={"/MovieDetail/" + movie.imdbID}>
-<h4>{movie.Title}</h4>
+  <div className="MovieCode" key={movie.imdbID}>
+    <Link to={"/MovieDetail/" + movie.imdbID}>
+      <h4>{movie.Title}</h4>
          <img src={movie.Poster} alt="" />
-        </Link>
-      </div>
+    </Link>
+  </div>
     );
   });
   return <div className="gallery">{movies}</div>;

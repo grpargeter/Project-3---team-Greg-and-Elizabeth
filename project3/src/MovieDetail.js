@@ -19,13 +19,10 @@ class MovieDetail extends Component {
     };
   }
   componentDidMount = (props) => {
+    console.log(this.props)
     axios
       .get(`http://www.omdbapi.com/?apikey=4d3f7a95&page=1&i=${this.props.match.params.imdbID}`)
       .then((response) => {
-        // console.log(props.movie.imdbID);
-        // const imdbId = this.props.match.params.imdbID;
-        // for (let i = 0; i < response.data.length; i++) {
-        //   if (response.data[i].imdbID == movieId)
         {
           this.setState({
             title: response.data.Title,
@@ -45,14 +42,13 @@ class MovieDetail extends Component {
   render() {
     return (
       <div className="wholepage">
-         <h1>{this.state.title} ({this.state.year})</h1> 
-         <h4>{this.state.rated}</h4>  
+         <h1>{this.state.title}</h1> <h4>({this.state.year})</h4> 
+         <h4>Rated {this.state.rated}</h4>  
          {this.state.genre}<br></br>
         <img src={this.state.poster} alt=""/>
         <h4>Plot</h4>
         {this.state.plot}
-        {this.state.year}
-        <h4>Actors</h4>
+         <h4>Actors</h4>
         {this.state.actors}
         <h4>Director</h4>
         {this.state.director}
