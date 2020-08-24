@@ -48,8 +48,8 @@ class App extends Component {
           movieArray: response.data.Search,
         });
       });
-      console.log(this.props)
-      this.props.history.push("/")
+      // console.log(this.props)
+      // this.props.history.push("/")
       
   };
 
