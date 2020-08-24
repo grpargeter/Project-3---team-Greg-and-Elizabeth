@@ -23,15 +23,12 @@ class App extends Component {
     axios
       .get(`http://www.omdbapi.com/?s=summer&apikey=4d3f7a95&page=1`)
       .then((response) => {
-        // let movieArray = [response.data.Search];
-        // console.log(response.data.Search[0].Poster);
         this.setState({
           movieArray: response.data.Search,
           title: response.data.Search[0].Title,
           poster: response.data.Search[0].Poster,
           movieId: response.data.Search[0].imdbID,
         });
-        console.log(this.movieArray);
       });
   };
 
@@ -47,28 +44,30 @@ class App extends Component {
       .get(`http://www.omdbapi.com/?s=${this.state.search}&apikey=4d3f7a95`)
       .then((response) => {
         console.log(response);
-        this.setState({
+        this.setState({    
           movieArray: response.data.Search,
         });
       });
+      // console.log(this.props)
+      // this.props.history.push("/")
+      
   };
 
   render() {
-    return (
+     return (
       <div className="App">
         <nav>
           <h1> Welcome to Movie Search</h1>
+          <Link to='/'>MovieList</Link>
           <form onSubmit={this.handleSubmit}>
             <input
               type="text"
               placeholder="Search"
               onChange={this.handleSearch}
             />
-            <input onClick={this.handleSubmit} type="submit" value="submit" />
+             <input type="submit" value="submit" />
           </form>
         </nav>
-        {/* <MovieList movieArray={this.state.movieArray} /> */}
-        {/* <MovieDetail /> */}
         <main>
           <Switch>
             <Route
@@ -77,12 +76,10 @@ class App extends Component {
               render={() => <MovieList movieArray={this.state.movieArray} />}
             />
             <Route
-              path="/MovieDetail"
+              path="/MovieDetail/:imdbID"
               render={(routerProps) => (
                 <MovieDetail
-                  {...routerProps}
-                  movieArray={this.state.movieArray}
-                />
+                  {...routerProps}/>
               )}
             />
           </Switch>
