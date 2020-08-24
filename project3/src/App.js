@@ -9,7 +9,7 @@ class App extends Component {
     super();
     this.state = {
       movieId: "",
-      initialMovie: [],
+      movieArray: [],
       title: "",
       poster: "",
     };
@@ -24,17 +24,28 @@ class App extends Component {
         // let movieArray = [response.data.Search];
         console.log(response.data.Search[0].Poster);
         this.setState({
-          title: response.data.Search[1].Title,
-          poster: response.data.Search[1].Poster,
+          movieArray: response.data.Search,
+          title: response.data.Search[0].Title,
+          poster: response.data.Search[0].Poster,
         });
+        console.log(this.movieArray);
       });
   };
   render() {
     return (
       <div className="App">
-        <h1>{this.state.title}</h1>
-        <img src={this.state.poster} alt="" />
-        <MovieList />
+        <nav>
+          <h1> Welcome to Movie Search</h1>
+          <form onSubmit={this.handleSubmit}>
+            <input
+              type="text"
+              placeholder="Search"
+              onChange={this.handleSearch}
+            />
+            <input onClick={this.handleSubmit} type="submit" value="submit" />
+          </form>
+        </nav>
+        <MovieList movieArray={this.state.movieArray} />
         <MovieDetail />
       </div>
     );
