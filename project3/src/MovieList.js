@@ -6,7 +6,7 @@ const MovieList = props => {
   let movies = props.movieArray.map(movie => {
     return (
       <div> 
-        <h2>{movie.Title}</h2>
+        <h4>{movie.Title}</h4>
 
 <img src={movie.Poster} alt=""/>
       </div>
