@@ -7,8 +7,11 @@ const MovieList = (props) => {
     return (
   <div className="MovieCode" key={movie.imdbID}>
     <Link to={"/MovieDetail/" + movie.imdbID}>
-      <h4>{movie.Title}</h4>
+      <div className="card">
          <img src={movie.Poster} alt="" />
+         <div className="container"><h4>{movie.Title}</h4>
+         </div>
+         </div>
     </Link>
   </div>
     );
