@@ -12,6 +12,8 @@ class App extends Component {
       movieArray: [],
       title: "",
       poster: "",
+      search: "",
+      userSearch: [],
     };
   }
   componentDidMount = () => {
@@ -31,12 +33,34 @@ class App extends Component {
         console.log(this.movieArray)
       });
   };
+
+
+  handleSearch = (event) => {
+    this.setState({
+      search: event.target.value,
+    });
+  };
+  
+  handleSubmit = (event) => {
+    event.preventDefault();
+    axios
+      .get(
+        `http://www.omdbapi.com/?s=${this.state.search}&apikey=4d3f7a95`
+      )
+      .then((response) => {
+        console.log(response);
+        this.setState({
+          movieArray: response.data.Search,
+        });
+      });
+  };
+
   render() {
     return (
       <div className="App">
         <nav>
           <h1> Welcome to Movie Search</h1>
-          <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit}>
           <input
             type="text"
             placeholder="Search"
