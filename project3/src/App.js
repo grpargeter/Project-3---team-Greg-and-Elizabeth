@@ -72,5 +72,5 @@ class App extends Component {
     );
   }
 }
-//This was added by Greg
+
 export default App;
