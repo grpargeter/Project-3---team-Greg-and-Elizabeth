@@ -23,15 +23,12 @@ class App extends Component {
     axios
       .get(`http://www.omdbapi.com/?s=summer&apikey=4d3f7a95&page=1`)
       .then((response) => {
-        // let movieArray = [response.data.Search];
-        // console.log(response.data.Search[0].Poster);
         this.setState({
           movieArray: response.data.Search,
           title: response.data.Search[0].Title,
           poster: response.data.Search[0].Poster,
           movieId: response.data.Search[0].imdbID,
         });
-        console.log(this.movieArray);
       });
   };
 
@@ -58,6 +55,7 @@ class App extends Component {
       <div className="App">
         <nav>
           <h1> Welcome to Movie Search</h1>
+          <Link to='/'>MovieList</Link>
           <form onSubmit={this.handleSubmit}>
             <input
               type="text"
@@ -67,8 +65,6 @@ class App extends Component {
             <input onClick={this.handleSubmit} type="submit" value="submit" />
           </form>
         </nav>
-        {/* <MovieList movieArray={this.state.movieArray} /> */}
-        {/* <MovieDetail /> */}
         <main>
           <Switch>
             <Route
@@ -77,7 +73,7 @@ class App extends Component {
               render={() => <MovieList movieArray={this.state.movieArray} />}
             />
             <Route
-              path="/MovieDetail"
+              path="/MovieDetail/:imdbID"
               render={(routerProps) => (
                 <MovieDetail
                   {...routerProps}

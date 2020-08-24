@@ -15,14 +15,15 @@ class MovieDetail extends Component {
       plot: "",
       ratings: [],
       poster: "",
+      imdbID: ""
     };
   }
-  componentDidMount = () => {
+  componentDidMount = (props) => {
     axios
-      .get(`http://www.omdbapi.com/?apikey=4d3f7a95&page=1&i=tt0111161`)
+      .get(`http://www.omdbapi.com/?apikey=4d3f7a95&page=1&i=${this.props.match.params.imdbID}`)
       .then((response) => {
-        console.log(this.movieId);
-        // const movieId = this.props.match.params.movieId;
+        // console.log(props.movie.imdbID);
+        // const imdbId = this.props.match.params.imdbID;
         // for (let i = 0; i < response.data.length; i++) {
         //   if (response.data[i].imdbID == movieId)
         {
@@ -44,18 +45,21 @@ class MovieDetail extends Component {
   render() {
     return (
       <div className="wholepage">
-        <h2>Movie Detail</h2>
-        <h1>{this.state.title}</h1>
-        <img src={this.state.poster} alt="" />
+         <h1>{this.state.title} ({this.state.year})</h1> 
+         <h4>{this.state.rated}</h4>  
+         {this.state.genre}<br></br>
+        <img src={this.state.poster} alt=""/>
         <h4>Plot</h4>
         {this.state.plot}
+        {this.state.year}
         <h4>Actors</h4>
         {this.state.actors}
-        <br></br>
+        <h4>Director</h4>
         {this.state.director}
         {this.state.reviews}
       </div>
     );
   }
 }
+
 export default MovieDetail;
