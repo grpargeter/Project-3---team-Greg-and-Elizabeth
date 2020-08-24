@@ -34,8 +34,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <h1>{this.state.title}</h1>
-        <img src={this.state.poster} alt="" /> */}
+        <nav>
+          <h1> Welcome to Movie Search</h1>
+          <form onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            placeholder="Search"
+            onChange={this.handleSearch}
+          />
+          <input onClick={this.handleSubmit} type="submit" value="submit" />
+        </form>
+        </nav>
         <MovieList movieArray={this.state.movieArray}/>
         <MovieDetail />
       </div>
