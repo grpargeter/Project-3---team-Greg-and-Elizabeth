@@ -13,7 +13,6 @@ class App extends Component {
       title: "",
       poster: "",
       search: "",
-      userSearch: [],
     };
   }
   componentDidMount = () => {
@@ -24,11 +23,12 @@ class App extends Component {
       .get(`http://www.omdbapi.com/?s=summer&apikey=4d3f7a95&page=1`)
       .then((response) => {
         // let movieArray = [response.data.Search];
-        console.log(response.data.Search[0].Poster);
+        // console.log(response.data.Search[0].Poster);
         this.setState({
           movieArray: response.data.Search,
           title: response.data.Search[0].Title,
           poster: response.data.Search[0].Poster,
+          movieId: response.data.Search[0].imdbID,
         });
         console.log(this.movieArray);
       });
@@ -68,6 +68,9 @@ class App extends Component {
         </nav>
         <MovieList movieArray={this.state.movieArray} />
         <MovieDetail />
+        <footer>
+          This Awesome Movie App was created by Elizabeth and Greg!!
+        </footer>
       </div>
     );
   }
