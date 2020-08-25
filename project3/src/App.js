@@ -21,7 +21,7 @@ class App extends Component {
   };
   getMovies = () => {
     axios
-      .get(`http://www.omdbapi.com/?s=summer&apikey=4d3f7a95&page=1`)
+      .get(`http://www.omdbapi.com/?s=vegas&apikey=4d3f7a95&page=1`)
       .then((response) => {
         this.setState({
           movieArray: response.data.Search,
@@ -44,28 +44,27 @@ class App extends Component {
       .get(`http://www.omdbapi.com/?s=${this.state.search}&apikey=4d3f7a95`)
       .then((response) => {
         console.log(response);
-        this.setState({    
+        this.setState({
           movieArray: response.data.Search,
         });
       });
-      // console.log(this.props)
-      // this.props.history.push("/")
-      
+    // console.log(this.props)
+    // this.props.history.push("/")
   };
 
   render() {
-     return (
+    return (
       <div className="App">
         <nav>
-          <h1> Welcome to Movie Search</h1>
-          <Link to='/'>MovieList</Link>
+          <h1> Welcome to The Movies!!!</h1>
+
           <form onSubmit={this.handleSubmit}>
             <input
               type="text"
               placeholder="Search"
               onChange={this.handleSearch}
             />
-             <input type="submit" value="submit" />
+            <input type="submit" value="submit" />
           </form>
         </nav>
         <main>
@@ -77,10 +76,7 @@ class App extends Component {
             />
             <Route
               path="/MovieDetail/:imdbID"
-              render={(routerProps) => (
-                <MovieDetail
-                  {...routerProps}/>
-              )}
+              render={(routerProps) => <MovieDetail {...routerProps} />}
             />
           </Switch>
         </main>
