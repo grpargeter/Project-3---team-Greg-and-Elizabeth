@@ -46,7 +46,7 @@ class MovieDetail extends Component {
     return (
       <div className="wholepage">
               <nav className="homepage">
-          <Link to="/">Movie Home Page</Link>
+          <Link to="/">return to Movie Home Page</Link>
         </nav>
         <div className="header"> <h1>{this.state.title}</h1></div>
         <div className="content">

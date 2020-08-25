@@ -48,20 +48,20 @@ class App extends Component {
           movieArray: response.data.Search,
         });
       });
-    // console.log(this.props)
-    // this.props.history.push("/")
+  console.log(this.props)
+    this.props.history.push("/")  
   };
 
   render() {
     return (
       <div className="App">
         <nav>
-          <h1> Welcome to The Movies!!!</h1>
+          <h1> Welcome_to_The_Movies!!!</h1>
 
           <form onSubmit={this.handleSubmit}>
             <input
               type="text"
-              placeholder="Search"
+              placeholder="keyword search"
               onChange={this.handleSearch}
             />
             <input type="submit" value="submit" />

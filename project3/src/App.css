@@ -4,6 +4,7 @@
 }
 nav {
   font-family: "Showtime-R9Ke.ttf";
+  height: 100px
 }
 .homepage {
   font-family: cursive;
@@ -16,13 +17,18 @@ nav {
   background-color: black;
   color: whitesmoke;
   justify-content: space-around;
+  padding-top: 25px;
 }
 .app {
   background-color: black;
+  display: flex;
+  height: 100%
 }
+
 h1 {
   font-size: 75px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 form {
@@ -44,12 +50,19 @@ img {
 
 .content {
   columns: 2;
+  height: 600px
 }
 
 .rightside {
-padding-top: 50px;
 height: 527px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
 
+html{
+  height: 100%;
+  background-color: black
 }
 
 .leftside {
@@ -58,12 +71,6 @@ height: 527px;
   justify-content: center;
 }
 
-.header {
-}
-
-.year {
-float: right
-}
 .poster {
   height: 500px;
 }
@@ -75,12 +82,9 @@ footer {
   color: whitesmoke;
   margin: 0px;
 }
+
 footer {
   text-align: center;
-  flex-shrink:0;
-}
-h1 {
-  margin: 0px;
 }
 
 /* unvisited link */
@@ -104,19 +108,21 @@ a:active {
   color: blue;
 }
 
+.MovieListWholePage {
+
+}
+
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 300px;
   height: auto;
-  border: 3px solid black;
+  border: 3px; 
   margin: 5px;
   text-align: center;
 }
-.MovieListWholePage {
-  justify-content: space-evenly;
-}
+
 /* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
