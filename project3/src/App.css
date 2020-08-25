@@ -63,7 +63,7 @@ a:active {
   transition: 0.3s;
   width: 300px;
   height: auto;
-  border: 3px solid red;
+  border: 3px solid black;
   margin: 5px;
   text-align: center;
 }
