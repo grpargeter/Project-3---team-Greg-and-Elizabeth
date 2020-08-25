@@ -21,7 +21,7 @@ class App extends Component {
   };
   getMovies = () => {
     axios
-      .get(`http://www.omdbapi.com/?s=vegas&apikey=4d3f7a95&page=1`)
+      .get(`http://www.omdbapi.com/?s=vegas&type=movie&apikey=4d3f7a95&page=1`)
       .then((response) => {
         this.setState({
           movieArray: response.data.Search,
@@ -41,7 +41,7 @@ class App extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .get(`http://www.omdbapi.com/?s=${this.state.search}&apikey=4d3f7a95`)
+      .get(`http://www.omdbapi.com/?s=${this.state.search}&type=movie&apikey=4d3f7a95`)
       .then((response) => {
         console.log(response);
         this.setState({
