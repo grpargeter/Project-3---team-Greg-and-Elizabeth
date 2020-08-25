@@ -18,6 +18,7 @@ nav {
   justify-content: space-around;
 }
 .app {
+  background-color: black;
 }
 h1 {
   font-size: 75px;
@@ -38,6 +39,32 @@ img {
 .wholepage {
   background-color: black;
   color: whitesmoke;
+ 
+}
+
+.content {
+  columns: 2;
+}
+
+.rightside {
+padding-top: 50px;
+height: 527px;
+
+}
+
+.leftside {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+}
+
+.year {
+float: right
+}
+.poster {
+  height: 500px;
 }
 
 header,
