@@ -19,7 +19,7 @@ const MovieList = (props) => {
     );
   });
   return <div className="linkonMovieList">
-    <Link to="/MovieTrivia">check out some movie trivia</Link>
+    <Link to="/MovieTrivia">check out some Movie Trivia</Link>
     <div className="gallery">{movies}</div></div>
 };
 

@@ -1,4 +1,4 @@
-html {
+html{
   color: whitesmoke;
   background-color: black;
   font-family: 'Times New Roman', Times, serif
@@ -15,6 +15,15 @@ h1 {
   text-align: center;
 }
 
+nav {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+input {
+  background-color: black;
+  color: whitesmoke
+}
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -28,9 +37,7 @@ h1 {
   background-color: black
 }
 
-nav {
-  font-family: Cursive;
-}
+
 
 form {
   text-align: right;
@@ -46,12 +53,14 @@ img {
 .content {
   columns: 2;
   column-width: auto;
-  height: 600px
+  height: 600px;
+  display: flex
 }
 
 .rightside {
 height: 600px;
 display: flex;
+flex-grow: 1;
 flex-direction: column;
 justify-content: center;
 }
@@ -60,10 +69,12 @@ justify-content: center;
   display: flex;
   justify-content: center;
   text-align: left;
+  width: 600px;
 }
 
 .poster {
   height: 500px;
+  margin: 50px
 }
 
 header,
@@ -77,7 +88,7 @@ footer {
 }
 
 .linkonMovieList{
-  font-family: cursive;
+
   size: 30px
 }
 

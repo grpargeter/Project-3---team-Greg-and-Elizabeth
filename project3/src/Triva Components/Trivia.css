@@ -2,10 +2,6 @@
   font-family: "Showtime-R9Ke.ttf";
   src: url("Showtime-R9Ke.ttf");
 }
-nav {
-  font-family: "Showtime-R9Ke.ttf";
-  height: 100px
-}
 
 .triviacard {
   cursor: pointer;
