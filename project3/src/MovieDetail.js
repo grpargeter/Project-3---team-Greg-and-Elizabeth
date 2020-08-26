@@ -51,7 +51,7 @@ class MovieDetail extends Component {
         <div className="header"> <h1>{this.state.title}</h1></div>
         <div className="content">
         <div className = "leftside">
-          <img className="poster" src={this.state.poster} alt="" /></div>
+          <img className="poster" src={this.state.poster} alt="no poster available" /></div>
         <div className = "rightside"> 
         <h4>Year </h4> {this.state.year}
         <h4>Rated</h4> {this.state.rated}

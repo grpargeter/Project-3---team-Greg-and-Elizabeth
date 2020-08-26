@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import MovieList from "./MovieList";
 import MovieDetail from "./MovieDetail";
+import MovieTrivia from "./Triva Components/MovieTrivia"
 import axios from "axios";
 import { Link, Route, Switch, Redirect } from "react-router-dom";
 
@@ -14,6 +15,7 @@ class App extends Component {
       title: "",
       poster: "",
       search: "",
+      triviaArray: []
     };
   }
   componentDidMount = () => {
@@ -31,6 +33,14 @@ class App extends Component {
         });
       });
   };
+
+  getTrivia = async () => {
+    let response = await axios(`https://opentdb.com/api.php?amount=25&category=11`);
+    console.log(response);
+    this.setState({
+triviaArray: response
+    })
+  }
 
   handleSearch = (event) => {
     this.setState({
@@ -55,7 +65,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav>
+        <header>
           <h1> Welcome_to_The_Movies!!!</h1>
 
           <form onSubmit={this.handleSubmit}>
@@ -66,7 +76,7 @@ class App extends Component {
             />
             <input type="submit" value="submit" />
           </form>
-        </nav>
+        </header>
         <main>
           <Switch>
             <Route
@@ -78,7 +88,8 @@ class App extends Component {
               path="/MovieDetail/:imdbID"
               render={(routerProps) => <MovieDetail {...routerProps} />}
             />
-          </Switch>
+            <Route path="/MovieTrivia/" component={MovieTrivia}/>
+            </Switch>
         </main>
         <footer>
           This Awesome Movie App was created by Elizabeth and Greg!!

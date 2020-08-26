@@ -2,14 +2,20 @@
   font-family: "Showtime-R9Ke.ttf";
   src: url("Showtime-R9Ke.ttf");
 }
-nav {
+header {
   font-family: "Showtime-R9Ke.ttf";
-  height: 100px
 }
+
+nav{
+  font-family: cursive;
+}
+div {
+  color: whitesmoke;
+}
+
 .homepage {
   font-family: cursive;
   font-size: 30px;
-  color: gold;
 }
 .gallery {
   display: flex;
@@ -21,14 +27,16 @@ nav {
 }
 .app {
   background-color: black;
+  color: whitesmoke;
   display: flex;
   height: 100%
 }
 
+
 h1 {
   font-size: 75px;
   text-align: center;
-  margin-bottom: 10px;
+  color: whitesmoke
 }
 
 form {
@@ -50,11 +58,12 @@ img {
 
 .content {
   columns: 2;
+  column-width: auto;
   height: 600px
 }
 
 .rightside {
-height: 527px;
+height: 600px;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -66,9 +75,10 @@ html{
 }
 
 .leftside {
-  width:400px;
+
   display: flex;
   justify-content: center;
+  text-align: left;
 }
 
 .poster {
