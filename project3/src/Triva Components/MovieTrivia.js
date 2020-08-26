@@ -9,17 +9,19 @@ const MovieTrivia = () => {
 
   useEffect(() => {
     const getTrivia = async () => {
-  let response = await axios(`https://opentdb.com/api.php?amount=25&category=11`);
+  let response = await axios(`https://opentdb.com/api.php?amount=25&category=11&encode=url3986`);
   console.log(response.data.results[0]);
   setItems(response.data.results)
   }
-
   getTrivia()
 }, [])
 
 return(
   <div>
-    <nav>          <Link to="/MovieTrivia">check out some movie trivia</Link></nav>
+  <nav className="homepage">
+          <Link to="/">return to Movie Home Page</Link><br></br>
+
+  </nav>
     <TriviaGrid items={items} />
   </div>
   )

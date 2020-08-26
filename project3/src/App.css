@@ -1,42 +1,35 @@
+html {
+  color: whitesmoke;
+  background-color: black;
+  font-family: 'Times New Roman', Times, serif
+}
+
 @font-face {
   font-family: "Showtime-R9Ke.ttf";
   src: url("Showtime-R9Ke.ttf");
 }
-header {
+
+h1 {
   font-family: "Showtime-R9Ke.ttf";
+  font-size: 75px;
+  text-align: center;
 }
 
-nav{
-  font-family: cursive;
-}
-div {
-  color: whitesmoke;
-}
-
-.homepage {
-  font-family: cursive;
-  font-size: 30px;
-}
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  background-color: black;
-  color: whitesmoke;
   justify-content: space-around;
   padding-top: 25px;
+  font-family: fantasy;
 }
 .app {
-  background-color: black;
-  color: whitesmoke;
   display: flex;
-  height: 100%
+  height: 100%;
+  background-color: black
 }
 
-
-h1 {
-  font-size: 75px;
-  text-align: center;
-  color: whitesmoke
+nav {
+  font-family: Cursive;
 }
 
 form {
@@ -48,12 +41,6 @@ img {
   height: 250px;
   border: 2px solid grey;
   margin-top: 20px;
-}
-
-.wholepage {
-  background-color: black;
-  color: whitesmoke;
- 
 }
 
 .content {
@@ -69,13 +56,7 @@ flex-direction: column;
 justify-content: center;
 }
 
-html{
-  height: 100%;
-  background-color: black
-}
-
 .leftside {
-
   display: flex;
   justify-content: center;
   text-align: left;
@@ -88,13 +69,16 @@ html{
 header,
 nav,
 footer {
-  background-color: black;
-  color: whitesmoke;
   margin: 0px;
 }
 
 footer {
   text-align: center;
+}
+
+.linkonMovieList{
+  font-family: cursive;
+  size: 30px
 }
 
 /* unvisited link */
@@ -118,9 +102,6 @@ a:active {
   color: blue;
 }
 
-.MovieListWholePage {
-
-}
 
 .card {
   /* Add shadows to create the "card" effect */

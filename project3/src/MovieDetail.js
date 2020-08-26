@@ -46,9 +46,10 @@ class MovieDetail extends Component {
     return (
       <div className="wholepage">
               <nav className="homepage">
-          <Link to="/">return to Movie Home Page</Link>
+          <Link to="/">return to Movie Home Page</Link><br></br>
+          <Link to="/MovieTrivia">check out some movie trivia</Link>
         </nav>
-        <div className="header"> <h1>{this.state.title}</h1></div>
+        <div className="header"> <h2>{this.state.title}</h2></div>
         <div className="content">
         <div className = "leftside">
           <img className="poster" src={this.state.poster} alt="no poster available" /></div>

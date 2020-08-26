@@ -6,6 +6,7 @@ const MovieList = (props) => {
   let movies = props.movieArray.map((movie) => {
     return (
       <div className="MovieListWholePage" key={movie.imdbID}>
+            
         <Link to={"/MovieDetail/" + movie.imdbID}>
           <div className="card">
             <img src={movie.Poster} alt="No Poster Available" />
@@ -17,7 +18,9 @@ const MovieList = (props) => {
       </div>
     );
   });
-  return <div className="gallery">{movies}</div>;
+  return <div className="linkonMovieList">
+    <Link to="/MovieTrivia">check out some movie trivia</Link>
+    <div className="gallery">{movies}</div></div>
 };
 
 export default MovieList;

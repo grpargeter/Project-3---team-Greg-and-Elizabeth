@@ -67,7 +67,6 @@ triviaArray: response
       <div className="App">
         <header>
           <h1> Welcome_to_The_Movies!!!</h1>
-
           <form onSubmit={this.handleSubmit}>
             <input
               type="text"
