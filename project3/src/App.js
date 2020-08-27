@@ -23,7 +23,7 @@ class App extends Component {
   };
   getMovies = () => {
     axios
-      .get(`http://www.omdbapi.com/?s=vegas&type=movie&apikey=4d3f7a95&page=1`)
+      .get(`https://www.omdbapi.com/?s=vegas&type=movie&apikey=4d3f7a95&page=1`)
       .then((response) => {
         this.setState({
           movieArray: response.data.Search,
