@@ -9,7 +9,7 @@ let TriviaItem = ({ item }) => {
            <h3> {decodeURIComponent(item.question)} </h3>
             </div>
         <div className='card-back'>
-        <strong>{decodeURIComponent(item.correct_answer)}</strong> 
+        <h3><strong>{decodeURIComponent(item.correct_answer)}</strong> </h3>
         </div>
         </div>
       </div>

@@ -19,7 +19,7 @@ const MovieTrivia = () => {
 return(
   <div>
   <nav className="homepage">
-          <Link to="/"><p>return to Movie Home Page</p></Link><br></br>
+          <Link to="/">return to Movie Home Page</Link><br></br>
 
   </nav>
     <TriviaGrid items={items} />

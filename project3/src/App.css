@@ -50,7 +50,7 @@ input {
   flex-wrap: wrap;
   justify-content: space-around;
   padding-top: 25px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .app {
   display: flex;
@@ -102,8 +102,8 @@ header,
 nav,
 footer {
   margin-top: 0px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 50px;
+  margin-right: 20px;
   
 }
 

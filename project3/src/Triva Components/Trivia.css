@@ -3,6 +3,14 @@
   src: url("Showtime-R9Ke.ttf");
 }
 
+html,
+body {
+  
+  height: 100vh;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .triviacard {
   cursor: pointer;
   background-color: transparent;
@@ -16,6 +24,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 5rem;
+  margin: 10px
 }
 
 .card-inner {
@@ -40,13 +49,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #000 url('https://i.pinimg.com/originals/63/4c/cd/634ccdbac5747d3c3e734aefe8e97d7c.png') no-repeat center center/cover;
+  /* opacity: 0.5; */
+  color: black;
+}
+
+h3{
+  margin-left: 55px;
+  margin-right: 50px
 }
 
 .card-back {
-
   transform: rotateY(180deg);
-
 }
+
 a {
   text-decoration: none;
 }
