@@ -9,7 +9,7 @@ const MovieTrivia = () => {
 
   useEffect(() => {
     const getTrivia = async () => {
-  let response = await axios(`https://opentdb.com/api.php?amount=25&category=11&encode=url3986`);
+  let response = await axios(`https://opentdb.com/api.php?amount=100&category=11&encode=url3986`);
   console.log(response.data.results[0]);
   setItems(response.data.results)
   }
