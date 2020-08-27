@@ -1,17 +1,15 @@
-import React from 'react';
+import React from "react";
 import "./Trivia.css";
-import MovieTrivia from "./MovieTrivia";
-import TriviaItem from './TriviaItem';
+import TriviaItem from "./TriviaItem";
 
-let TriviaGrid = ({items}) => {
-    return (
-        <div className="cards">
-            {items.map(item => (
-                <TriviaItem key={item.id} item={item}></TriviaItem>
-                 ))
-                }
-                </div>
-            )      
-}
+let TriviaGrid = ({ items }) => {
+  return (
+    <div className="cards">
+      {items.map((item) => (
+        <TriviaItem key={item.id} item={item}></TriviaItem>
+      ))}
+    </div>
+  );
+};
 
-export default TriviaGrid
+export default TriviaGrid;

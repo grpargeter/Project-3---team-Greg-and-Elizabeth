@@ -26,7 +26,6 @@ class MovieDetail extends Component {
         `http://www.omdbapi.com/?apikey=4d3f7a95&page=1&i=${this.props.match.params.imdbID}`
       )
       .then((response) => {
-        console.log(response.data);
         let ratings = response.data.Ratings.map((rating) => {
           return (
             <p>
