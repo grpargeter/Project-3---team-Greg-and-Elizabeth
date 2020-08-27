@@ -7,3 +7,4 @@ An application designed for users to search movies. A user can search by a keywo
 
 Wireframes:
 ![PostmanAPI](/Planning_Directory/Postman Api Data OMDB API.png)
+![Trivia](/Planning_Directory/Trivia.png)
