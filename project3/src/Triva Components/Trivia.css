@@ -2,6 +2,8 @@
   font-family: "Showtime-R9Ke.ttf";
   src: url("Showtime-R9Ke.ttf");
 }
+<<<<<<< HEAD
+=======
 
 html,
 body {
@@ -10,6 +12,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+>>>>>>> a310aec5a3738ebe89e7ba88eb25f082bd4bcc95
 .triviacard {
   cursor: pointer;
   background-color: transparent;
@@ -54,11 +57,18 @@ body {
   color: black;
 }
 
+<<<<<<< HEAD
 h3 {
+=======
+<<<<<<< HEAD
+=======
+h3{
+>>>>>>> 16bea5de7a390cb659965ca7f8df3088c63086de
   margin-left: 55px;
   margin-right: 50px;
 }
 
+>>>>>>> a310aec5a3738ebe89e7ba88eb25f082bd4bcc95
 .card-back {
   transform: rotateY(180deg);
 }
