@@ -2,6 +2,18 @@
   font-family: "Showtime-R9Ke.ttf";
   src: url("Showtime-R9Ke.ttf");
 }
+<<<<<<< HEAD
+=======
+
+html,
+body {
+  
+  height: 100vh;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+>>>>>>> a310aec5a3738ebe89e7ba88eb25f082bd4bcc95
 .triviacard {
   cursor: pointer;
   background-color: transparent;
@@ -15,6 +27,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 5rem;
+  margin: 10px
 }
 
 .card-inner {
@@ -39,11 +52,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #000 url('https://i.pinimg.com/originals/63/4c/cd/634ccdbac5747d3c3e734aefe8e97d7c.png') no-repeat center center/cover;
+  color: black;
 }
 
+<<<<<<< HEAD
+=======
+h3{
+  margin-left: 55px;
+  margin-right: 50px
+}
+
+>>>>>>> a310aec5a3738ebe89e7ba88eb25f082bd4bcc95
 .card-back {
   transform: rotateY(180deg);
 }
+
 a {
   text-decoration: none;
 }

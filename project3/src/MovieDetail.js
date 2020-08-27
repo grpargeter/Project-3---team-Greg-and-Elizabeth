@@ -28,9 +28,11 @@ class MovieDetail extends Component {
       .then((response) => {
         let ratings = response.data.Ratings.map((rating) => {
           return (
-            <h4>
-              {rating.Source} = {rating.Value}
-            </h4>
+            <p>
+            <span>
+              {rating.Source} -- {rating.Value}
+            </span>
+            </p>
           );
         });
         this.setState({
@@ -68,12 +70,12 @@ class MovieDetail extends Component {
             />
           </div>
           <div className="rightside">
-            <h4>Year: {this.state.year}</h4>
-            <h4>Rated: {this.state.rated}</h4>
-            <h4>Genre: {this.state.genre}</h4>
-            <h4>Plot: {this.state.plot}</h4>
-            <h4>Actors: {this.state.actors}</h4>
-            <h4>Director: {this.state.director}</h4>
+            <p>Year  --     <span>{this.state.year}</span></p>
+            <p>Rated  --      <span>{this.state.rated}</span></p>
+            <p>Genre  -- <span>{this.state.genre}</span></p>
+            <p>Plot  -- <span>{this.state.plot}</span></p>
+            <p>Actors  --      <span>{this.state.actors}</span></p>
+            <p>Director  --  <span>{this.state.director}</span></p>
             {this.state.ratings}
           </div>
         </div>
